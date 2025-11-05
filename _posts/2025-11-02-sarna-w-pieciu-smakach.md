@@ -6,4 +6,4 @@ thumbnail: /images/2025-11-02-sarna-w-pieciu-smakach.jpg
 ---
 Sezonowo, czyli sarna.
 
-![image](/images/2025-11-02-sarna-w-pieciu-smakach.jpg)
+![image](/cuisine/images/2025-11-02-sarna-w-pieciu-smakach.jpg)
