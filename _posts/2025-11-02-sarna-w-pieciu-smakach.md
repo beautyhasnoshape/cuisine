@@ -2,14 +2,14 @@
 layout: post
 title: "Sarna w pięciu smakach"
 date: 2025-11-02
-thumbnail: /images/2025-11-02-sarna-w-pieciu-smakach.jpg
+thumbnail: /images/2025-11-02-sarna-w-pieciu-smakach.jpeg
 ---
 Sezonowo, czyli sarna.
 
-![image](/cuisine/images/2025-11-02-sarna-w-pieciu-smakach.jpg)
+![image](/cuisine/images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
 
-![image](../images/2025-11-02-sarna-w-pieciu-smakach.jpg)
+![image](../images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
 
-![image](/images/2025-11-02-sarna-w-pieciu-smakach.jpg)
+![image](/images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
 
 ![image](images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
