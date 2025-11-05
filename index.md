@@ -1,7 +1,6 @@
 ---
-layout: custom_home
-title: Cuisine
-description: Blog o smakach, kuchni i naturze
+layout: home
+title: Strona główna
 ---
 
 Witaj na moim blogu kulinarnym **Cuisine**!
