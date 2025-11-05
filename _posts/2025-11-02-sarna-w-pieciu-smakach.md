@@ -11,3 +11,5 @@ Sezonowo, czyli sarna.
 ![image](../images/2025-11-02-sarna-w-pieciu-smakach.jpg)
 
 ![image](/images/2025-11-02-sarna-w-pieciu-smakach.jpg)
+
+![image](images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
