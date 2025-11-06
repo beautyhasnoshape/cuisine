@@ -43,9 +43,28 @@ jobs:
 
       - name: Copy thumbnails into site
         run: |
-          echo "Copying thumbnails into site output"
+          echo "Starting thumbnail copy step..."
           mkdir -p ./_site/images/thumbs
-          cp -r images/thumbs/* ./_site/images/thumbs/ || true
+
+          thumb_count=$(find images/thumbs -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | wc -l)
+          echo "Found $thumb_count thumbnails ready to copy."
+
+          if [ "$thumb_count" -eq 0 ]; then
+            echo "No thumbnails found to copy. Skipping."
+            exit 0
+          fi
+
+          copied_count=0
+          find images/thumbs -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -exec bash -c '
+            for file; do
+              cp "$file" ./_site/images/thumbs/
+              ((copied_count++))
+              echo "Copied: $(basename "$file")"
+            done
+            echo "Copied $copied_count thumbnail(s) to ./_site/images/thumbs"
+          ' bash {} +
+
+          echo "Copy summary: $thumb_count available, $copied_count copied."
 
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
