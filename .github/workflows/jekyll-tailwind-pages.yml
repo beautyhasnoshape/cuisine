@@ -41,6 +41,9 @@ jobs:
             done
           ' bash {} +
 
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
+
       - name: Copy thumbnails into site
         run: |
           echo "Starting thumbnail copy step..."
@@ -65,9 +68,6 @@ jobs:
           ' bash {} +
 
           echo "Copy summary: $thumb_count available, $copied_count copied."
-
-      - name: Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
