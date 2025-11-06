@@ -10,6 +10,9 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+include:
+  - images/thumbs
+
 plugins:
   - jekyll-remote-theme
   - jekyll-paginate
