@@ -12,7 +12,8 @@ layout: default
   <article class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-200 bg-white">
     <a href="{{ post.url | relative_url }}">
       {% if post.thumbnail %}
-      <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+        {% assign thumb_name = post.thumbnail | split: '/' | last %}
+        <img src="{{ '/images/thumbs/' | append: thumb_name | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover rounded-lg">
       {% else %}
       <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">Brak zdjęcia</div>
       {% endif %}
