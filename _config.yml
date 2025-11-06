@@ -1,11 +1,23 @@
-title: Cuisine
-description: Kulinarne notatki i inspiracje, czasem coś więcej
-remote_theme: zerostaticthemes/jekyll-atlantic-theme
-baseurl: "/cuisine/"
-minimal_mistakes_skin: sunrise
-plugins:
-  - jekyll-remote-theme
+title: "Cuisine"
+description: "Kulinarne notatki i inspiracje, czasem coś więcej"
+baseurl: "/cuisine"
+url: "https://beautyhasnoshape.github.io"
+
+theme: null
+
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+
+author:
+  name: "Don Vito"
+  bio: "O smakach, zapachach i przygodach w kuchni — z pasją i intuicją."
+
+paginate: 6
+paginate_path: "/page:num/"
+timezone: Europe/Zurich
