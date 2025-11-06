@@ -2,9 +2,11 @@
 layout: post
 title: "Sarna w pięciu smakach"
 date: 2025-11-02
+categories: [dziczyzna, przepisy]
 thumbnail: /images/2025-11-02-sarna-w-pieciu-smakach.jpeg
 ---
+
 Sezonowo, czyli sarna.
 
-![image](/images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
+![sarna w pięciu smakach](/images/2025-11-02-sarna-w-pieciu-smakach.jpeg)
 
