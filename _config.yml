@@ -1,4 +1,9 @@
 title: Cuisine
-description: Kulinarne notatki i inspiracje
-theme: minima
+description: Kulinarne notatki i inspiracje, czasem coś więcej
+remote_theme: zerostaticthemes/jekyll-atlantic-theme
+plugins:
+  - jekyll-remote-theme
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
