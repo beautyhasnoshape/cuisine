@@ -1,11 +1,26 @@
-<h1>{{ page.title }}</h1>
-<p>{{ page.description }}</p>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | relative_url }}">
+</head>
+<body class="max-w-3xl mx-auto px-6 py-8 text-gray-800">
+  <header class="mb-10 border-b pb-4">
+    <h1 class="text-3xl font-bold"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <nav class="mt-4 space-x-4 text-blue-700">
+      {% for item in site.navigation %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </header>
 
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <small>{{ post.date | date: "%d %B %Y" }}</small>
-  </li>
-  {% endfor %}
-</ul>
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="mt-10 text-sm text-gray-500 border-t pt-4">
+    © {{ site.time | date: "%Y" }} {{ site.title }} – Wszystkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
