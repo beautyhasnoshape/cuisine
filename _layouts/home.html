@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section class="text-center mb-10">
+  <h1 class="text-4xl font-bold mb-2">{{ site.title }}</h1>
+  <p class="text-gray-600">{{ site.description }}</p>
+</section>
+
+<section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {% for post in site.posts %}
+  <article class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-200 bg-white">
+    <a href="{{ post.url | relative_url }}">
+      {% if post.thumbnail %}
+      <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+      {% else %}
+      <div class="w-full h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">Brak zdjęcia</div>
+      {% endif %}
+    </a>
+    <div class="p-4">
+      <h2 class="text-xl font-semibold mb-2">
+        <a href="{{ post.url | relative_url }}" class="hover:text-blue-700">{{ post.title }}</a>
+      </h2>
+      <p class="text-gray-500 text-sm mb-3">{{ post.date | date: "%-d %B %Y" }}</p>
+      <p class="text-gray-700 text-sm line-clamp-3">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+      <a href="{{ post.url | relative_url }}" class="inline-block mt-3 text-blue-700 hover:underline text-sm">Czytaj dalej →</a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
