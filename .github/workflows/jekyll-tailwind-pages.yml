@@ -41,6 +41,12 @@ jobs:
             done
           ' bash {} +
 
+      - name: Copy thumbnails into site
+        run: |
+          echo "Copying thumbnails into site output"
+          mkdir -p ./_site/images/thumbs
+          cp -r images/thumbs/* ./_site/images/thumbs/ || true
+
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
 
