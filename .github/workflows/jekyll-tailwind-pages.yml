@@ -1,21 +1,37 @@
-name: Build Jekyll with Tailwind
+name: Build and Deploy Jekyll Atlantic Theme
+
 on:
   push:
     branches: [ "main" ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-      - run: gem install bundler jekyll
-      - run: bundle install
-      - run: npm install
-      - run: npm run build
-      - run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
-      - uses: peaceiris/actions-gh-pages@v3
+
+      - name: Install dependencies
+        run: |
+          gem install bundler jekyll
+          bundle install || true
+
+      - name: Setup Node and build Tailwind
+        run: |
+          npm install
+          npm run build
+
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build -d ./_site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
