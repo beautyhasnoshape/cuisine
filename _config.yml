@@ -1,6 +1,8 @@
 title: Cuisine
 description: Kulinarne notatki i inspiracje, czasem coś więcej
 remote_theme: zerostaticthemes/jekyll-atlantic-theme
+baseurl: "/cuisine/"
+minimal_mistakes_skin: sunrise
 plugins:
   - jekyll-remote-theme
 markdown: kramdown
